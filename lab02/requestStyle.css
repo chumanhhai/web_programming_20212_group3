@@ -1,0 +1,37 @@
+#body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    height: 100vh;
+}
+
+#header {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.inputContainer {
+    margin-bottom: 20px;
+}
+
+.inputContainer .field {
+    padding: 7px 7px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+.button {
+    padding: 10px 10px;
+}
+
+#genderContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+
+

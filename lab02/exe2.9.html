@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="requestStyle.css">
+    <title>Document</title>
+</head>
+
+<body id="body">
+    <div id="header">Register Form</div>
+    <form action="exe2.9.php" , method="post">
+        <div class="inputContainer">
+            <input type="text" placeholder="name" name="name" class="field">
+        </div>
+        <div class="inputContainer">
+            <input type="text" placeholder="university" name="university" class="field">
+        </div>
+        <div class="inputContainer">
+            <input type="text" placeholder="class" name="class" class="field">
+        </div>
+        <div class="inputContainer">
+            <input type="number" placeholder="age" name="age" class="field">
+        </div>
+        <div class="inputContainer" id="genderContainer">
+            <span>Gender?</span>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </div>
+        <div class="inputContainer">
+            <div>What are your hobbies</div>
+            <input type="checkbox" id="game" name="hobby[]" value="game">
+            <label for="game">game</label><br>
+            <input type="checkbox" id="music" name="hobby[]" value="music">
+            <label for="music">music</label><br>
+            <input type="checkbox" id="sport" name="hobby[]" value="sport">
+            <label for="sport">sport</label><br>
+            <input type="checkbox" id="travel" name="hobby[]" value="travel">
+            <label for="travel">travel</label><br>
+        </div>
+        <input type="submit" value="send" class="button">
+    </form>
+</body>
+
+</html>
