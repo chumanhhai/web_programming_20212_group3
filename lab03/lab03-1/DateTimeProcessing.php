@@ -1,12 +1,12 @@
-<html>
+<html lang="en">
 <head><title>Date Time Processor</title></head>
 <body>
-<h4>Enter your name and select date and time for the appointment</h4>
+<h1>Enter your name and select date and time for the appointment</h1>
 <form action="DateTimeProcessing.php" method="POST">
     <table>
         <tbody>
         <tr>
-            <td>Yourname:</td>
+            <td>Your Name:</td>
             <td><input type="text" name="name" value="<?= get_value("name"); ?>"></td>
         </tr>
         <tr>
@@ -47,9 +47,9 @@
         $timestamp = strtotime($iso_time);
 
         if (checkdate($month, $day, $year)) {
-            print "Hi $name! You choose the date " . date('D, d M Y H:i:s', $timestamp) . "<br />";
-            print "There is " . cal_days_in_month(CAL_GREGORIAN, $month, $year) . " days in " . date('F Y', $timestamp) . "<br />";
-            print "12 hours from this is " . date('D, d M Y H:i:s', $timestamp + 12 * 60 * 60);
+            print sprintf(sprintf("Hi %s! You choose the date %%s<br />", $name), date('D, d M Y H:i:s', $timestamp));
+            print sprintf("There is %s days in %s<br />", cal_days_in_month(CAL_GREGORIAN, $month, $year), date('F Y', $timestamp));
+            print sprintf("12 hours from this is %s", date('D, d M Y H:i:s', $timestamp + 12 * 60 * 60));
         } else {
             print "Your date is invalid!";
         }
@@ -61,12 +61,12 @@
 <?php
 function select($name, $start, $end, $current)
 {
-    print "<select name=\"$name\">";
+    print sprintf("<select name=\"%s\">", $name);
     for ($i = $start; $i <= $end; $i++) {
         if ($i == $current)
-            print "<option value=\"$i\" selected>$i</option>";
+            print sprintf("<option value=\"%s\" selected>%s</option>", $i, $i);
         else
-            print "<option value=\"$i\">$i</option>";
+            print sprintf("<option value=\"%s\">%s</option>", $i, $i);
     }
     print "</select>";
 }
