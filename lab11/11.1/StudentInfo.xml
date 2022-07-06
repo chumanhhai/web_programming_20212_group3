@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href= "Student.css"?>
+<!DOCTYPE student SYSTEM
+        "/media/theobmdev/HUST/HUST Labs/web-programming/web_programming_20212_group3/lab11/11.1/Student.dtd">
+<student>
+    <name>Name: Bui Manh Tu</name>
+    <id>Student ID: 20194870</id>
+    <dob>DOB: 08/06/2001</dob>
+    <city>City: Hanoi</city>
+    <email>Email: tu.dominic861@gmail.com</email>
+    <phone>Phone: 0123456789</phone>
+    <school>School: Hanoi University of Science and Technology</school>
+</student>
